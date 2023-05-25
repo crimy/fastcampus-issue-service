@@ -1,3 +1,37 @@
+POST http://localhost:8080/api/v1/issues/1/comments
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "body": "첫번째 댓글입니다"
+}
+
+<> 2023-05-25T215221.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T215207.200.json
+
+###
+
 GET http://localhost:8080/api/v1/issues/1
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
