@@ -36,4 +36,10 @@ class IssueController(
         @PathVariable id: Long,
         @RequestBody issueRequest: IssueRequest,
     ) = issueService.edit(authUser.userId, id, issueRequest)
+
+    @DeleteMapping("{id}")
+    fun delete(
+        authUser: AuthUser,
+        @PathVariable id: Long,
+    ) = issueService.delete(id)
 }
