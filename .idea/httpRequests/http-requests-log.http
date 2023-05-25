@@ -1,0 +1,263 @@
+GET http://localhost:8080/api/v1/issues/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-25T213654.200.json
+
+###
+
+DELETE http://localhost:8080/api/v1/issues/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T213622.200.json
+
+###
+
+PUT http://localhost:8080/api/v1/issues/1
+Content-Type: application/json
+Content-Length: 148
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "새로운 이슈",
+  "description": "새로운 이슈입니다",
+  "type": "TASK",
+  "priority": "HIGH",
+  "status": "IN_PROGRESS"
+}
+
+<> 2023-05-25T213211.200.json
+
+###
+
+PUT http://localhost:8080/api/v1/issues/1
+Content-Length: 180
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+Content-Type: application/json
+
+{
+  "summary": "새로운 이슈",
+  "description": "새로운 이슈입니다",
+  "type": "TASK",
+  "priority": "HIGH",
+  "status": "IN_PROGRESS"
+}
+
+<> 2023-05-25T213155.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T213131.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-25T213129.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-25T212305.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T212304.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-25T212300.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-25T211527.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T211526.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T211524.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-25T211522.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-24T232816.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-24T232705.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+Content-Length: 124
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2023-05-24T232247.200.json
+
+###
+

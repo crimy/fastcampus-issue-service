@@ -55,8 +55,7 @@ class IssueService(
 
     @Transactional
     fun delete(id: Long) {
-        val issue = issueRepository.findByIdOrNull(id) ?: throw NotFoundException("이슈가 존재하지 않습니다")
-        issueRepository.delete(issue)
+        issueRepository.deleteById(id)
     }
 
 }
