@@ -2,8 +2,11 @@ package com.fastcampus.issueservice.service
 
 import com.fastcampus.issueservice.domain.Issue
 import com.fastcampus.issueservice.domain.IssueRepository
+import com.fastcampus.issueservice.domain.IssueStatus
+import com.fastcampus.issueservice.exception.NotFoundException
 import com.fastcampus.issueservice.model.IssueRequest
 import com.fastcampus.issueservice.model.IssueResponse
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -23,4 +26,16 @@ class IssueService(
         )
         return IssueResponse(issueRepository.save(issue))
     }
+
+    @Transactional(readOnly = true)
+    fun getAll(status: IssueStatus) =
+        issueRepository.findAllByStatusOrderByCreatedAtDesc(status)
+            ?.map { IssueResponse(it) }
+
+    @Transactional(readOnly = true)
+    fun get(issueId: Long): IssueResponse {
+        val issue = issueRepository.findByIdOrNull(issueId) ?: throw NotFoundException("이슈가 존재하지 않습니다")
+        return IssueResponse(issue)
+    }
+
 }
