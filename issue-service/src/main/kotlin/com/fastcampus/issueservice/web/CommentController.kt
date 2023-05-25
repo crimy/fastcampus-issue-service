@@ -23,10 +23,8 @@ class CommentController(
     @PutMapping("{commentId}")
     fun edit(
         authUser: AuthUser,
-        @PathVariable issueId: Long,
         @PathVariable commentId: Long,
         @RequestBody request: CommentRequest,
-    ): CommentResponse {
-        return commentService.edit(commentId, request)
-    }
+    ) = commentService.edit(commentId, authUser.userId, request)
+
 }

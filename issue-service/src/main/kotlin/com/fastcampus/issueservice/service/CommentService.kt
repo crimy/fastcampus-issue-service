@@ -32,11 +32,10 @@ class CommentService(
     }
 
     @Transactional
-    fun edit(id: Long, request: CommentRequest): CommentResponse {
-        val comment = commentRepository.findByIdOrNull(id) ?: throw NotFoundException("댓글이 존재하지 않습니다")
-        with(comment) {
-            comment.body = body
-            return commentRepository.save(comment).toResponse()
+    fun edit(id: Long, userId: Long, request: CommentRequest): CommentResponse? {
+        return commentRepository.findByIdAndUserId(id, userId)?.run {
+            body = request.body
+            commentRepository.save(this).toResponse()
         }
     }
 }
