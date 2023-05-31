@@ -1,0 +1,49 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+package com.fastcampus.issueservice;
+service Issue {
+  rpc create (IssueRequest) returns (IssueResponse) {}
+}
+
+message IssueRequest {
+  string summary = 1;
+  string description = 2;
+  IssueType type = 3;
+  IssuePriority priority = 4;
+  IssueStatus status = 5;
+}
+
+message IssueResponse {
+  int64 id = 1;
+  repeated CommentResponse comments = 2;
+  string summary = 3;
+  string description = 4;
+  int64 userId = 5;
+  IssueType type = 6;
+  IssuePriority priority = 7;
+  IssueStatus status = 8;
+  google.protobuf.Timestamp createdAt = 9;
+  google.protobuf.Timestamp updatedAt = 10;
+}
+
+message CommentResponse {
+  int64 id = 1;
+  int64 issueId = 2;
+  int64 userId = 3;
+  string body = 4;
+  optional string username = 5;
+}
+enum IssueType {
+  BUG = 0;
+  TASK = 1;
+}
+enum IssuePriority {
+  LOW = 0;
+  MEDIUM = 1;
+  HIGH = 2;
+}
+enum IssueStatus {
+  TODO = 0;
+  IN_PROGRESS = 1;
+  RESOLVE = 2;
+}
